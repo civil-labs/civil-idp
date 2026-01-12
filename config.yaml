@@ -35,8 +35,8 @@ staticPasswords:
     userID: "2e1c7fa0-762c-47fc-9752-9b7ba8c86bd2"
 
 staticClients:
-  - id: civil-bridge
-    name: "Civil Go Bridge"
+  - id: civil-gateway
+    name: "Civil Go Gateway"
     # Placeholder: Dex will read the secret from the environment variable
     secret: "{{ .Env.DEX_CLIENT_SECRET }}"
     redirectURIs:
