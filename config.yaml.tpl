@@ -30,7 +30,7 @@ staticClients:
     redirectURIs:
       - "${DEX_PROTOTYPE_FRONTEND_REDIRECT_URI}"
 
-connectors: ${DEX_CONNECTOR_CONFIG}
+${DEX_CONNECTORS_LIST}
 
 expiry:
   deviceRequests: "5m"
