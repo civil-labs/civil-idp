@@ -10,16 +10,14 @@ RUN apk add --no-cache openssl gettext
 
 # 2. Setup Directory
 WORKDIR /etc/dex
-RUN mkdir -p /etc/dex && chown -R dex:dex /etc/dex
 
-# 3. Copy Assets
-COPY config.yaml.tpl /etc/dex/config.yaml.tpl
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+# Use the numeric UID/GID (1001 is the Dex default)
+RUN mkdir -p /etc/dex && chown -R 1001:1001 /etc/dex
 
-# 4. Make script executable
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+# 3. Copy Assets (Ensure you chown during the copy too!)
+COPY --chown=1001:1001 config.yaml /etc/dex/config.yaml
 
-USER dex
+USER 1001
 
 # 5. Set Entrypoint
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
