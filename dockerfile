@@ -15,7 +15,7 @@ WORKDIR /etc/dex
 RUN mkdir -p /etc/dex && chown -R 1001:1001 /etc/dex
 
 # 3. Copy Assets (Ensure you chown during the copy too!)
-COPY --chown=1001:1001 config.yaml /etc/dex/config.yaml
+COPY --chown=1001:1001 config.yaml.tpl /etc/dex/config.yaml.tpl
 
 USER 1001
 
