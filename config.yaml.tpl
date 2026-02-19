@@ -54,16 +54,16 @@ logger:
   level: "info"
   format: "json" # Output structured logs
 
-grpc:
-  # Cannot be the same address as an HTTP(S) service.
-  addr: "0.0.0.0:${DEX_GRPC_PORT}"
+# grpc:
+#   # Cannot be the same address as an HTTP(S) service.
+#   addr: "0.0.0.0:${DEX_GRPC_PORT}"
 
-  # Server certs. If TLS credentials aren't provided dex will run in plaintext (HTTP) mode.
-  tlsCert: "${DEX_GRPC_CERT_FILE}"
-  tlsKey: "${DEX_GRPC_KEY_FILE}"
+#   # Server certs. If TLS credentials aren't provided dex will run in plaintext (HTTP) mode.
+#   tlsCert: "${DEX_GRPC_CERT_FILE}"
+#   tlsKey: "${DEX_GRPC_KEY_FILE}"
 
-  # Client auth CA.
-  tlsClientCA: "${DEX_GRPC_CA_FILE}"
+#   # Client auth CA.
+#   tlsClientCA: "${DEX_GRPC_CA_FILE}"
 
-  # enable reflection
-  reflection: true
+#   # enable reflection
+#   reflection: true
