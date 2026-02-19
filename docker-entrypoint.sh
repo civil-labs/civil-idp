@@ -53,14 +53,14 @@ if [ ! -f "$DEX_GRPC_KEY_FILE" ] || [ ! -f "$DEX_GRPC_CERT_FILE" ]; then
 
     chmod 600 "$DEX_GRPC_KEY_FILE"
 fi
-# Special Handling for Client CA (mTLS)
-# If the config requires a Client CA but we didn't inject one, 
-# we copy the Server Cert to the Client CA path to prevent Dex from crashing.
-# (This effectively allows the server to 'trust itself', which is safe-ish for a fallback)
-if [ ! -f "$CLIENT_CA" ]; then
-    echo "No Client CA found. Using Server Cert as CA fallback to satisfy config..."
-    cp "$SERVER_CERT" "$CLIENT_CA"
-fi
+# # Special Handling for Client CA (mTLS)
+# # If the config requires a Client CA but we didn't inject one, 
+# # we copy the Server Cert to the Client CA path to prevent Dex from crashing.
+# # (This effectively allows the server to 'trust itself', which is safe-ish for a fallback)
+# if [ ! -f "$CLIENT_CA" ]; then
+#     echo "No Client CA found. Using Server Cert as CA fallback to satisfy config..."
+#     cp "$SERVER_CERT" "$CLIENT_CA"
+# fi
 
 # ---------------------------------------------------------------------
 # 3. Configuration Generation
