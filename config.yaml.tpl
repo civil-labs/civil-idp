@@ -19,7 +19,7 @@ oauth2:
     - "authorization_code"
     - "refresh_token"
   responseTypes: [ "code" ]
-  alwaysShowLoginScreen: true
+  alwaysShowLoginScreen: false
   skipApprovalScreen: true
 
 staticClients:
