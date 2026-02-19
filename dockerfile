@@ -16,7 +16,10 @@ RUN mkdir -p /etc/dex && chown -R 1001:1001 /etc/dex
 
 # 3. Copy Assets (Ensure you chown during the copy too!)
 COPY --chown=1001:1001 config.yaml.tpl /etc/dex/config.yaml.tpl
-COPY docker-entrypoint.sh /usr/local/bin/
+
+# Fix: Copy the script with the correct ownership, then make it executable
+COPY --chown=1001:1001 docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 USER 1001
 
