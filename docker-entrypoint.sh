@@ -69,7 +69,7 @@ fi
 # 1. Decode the Base64 config into a temporary variable
 #    If the variable is empty, default to "[]" to prevent YAML errors.
 if [ -n "$DEX_CONNECTORS_DEF_BASE64" ]; then
-    export DEX_CONNECTORS_LIST=$(echo "$DEX_CONNECTORS_DEF_BASE64" | base64 -d | envsubst) # Need to run envsubst here too to ensure the env vars within the connectors list get replaced properly
+    export DEX_CONNECTORS_LIST=$(echo "$DEX_CONNECTORS_DEF_BASE64" | base64 -d )
 else
     export DEX_CONNECTORS_LIST="[]"
 fi
