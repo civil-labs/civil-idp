@@ -29,6 +29,12 @@ staticClients:
     secret: "${DEX_PROTOTYPE_FRONTEND_CLIENT_SECRET}"
     redirectURIs:
       - "${DEX_PROTOTYPE_FRONTEND_REDIRECT_URI}"
+  - id: oidc-debugger
+    name: "OIDC Debugger"
+    # Placeholder: Dex will read the secret from the environment variable
+    secret: "${DEX_PROTOTYPE_FRONTEND_CLIENT_SECRET}"
+    redirectURIs:
+      - "${DEX_PROTOTYPE_FRONTEND_REDIRECT_URI}"
 
 ${DEX_CONNECTORS_LIST}
 
