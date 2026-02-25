@@ -42,7 +42,7 @@ ${DEX_CONNECTORS_LIST}
 expiry:
   deviceRequests: "5m"
   signingKeys: "6h"
-  idTokens: "24h"
+  idTokens: "1h"
   refreshTokens:
     reuseInterval: "3s"
     validIfNotUsedFor: "2160h" # 90 days
