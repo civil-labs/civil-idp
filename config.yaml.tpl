@@ -12,7 +12,7 @@ storage:
     user: "${DEX_POSTGRES_USERNAME}" 
     password: "${DEX_POSTGRES_PASSWORD}" 
     ssl:
-      mode: require
+      mode: prefer
 
 oauth2:
   grantTypes:
