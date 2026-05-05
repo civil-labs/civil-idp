@@ -28,8 +28,9 @@ oauth2:
 staticClients:
   - id: civil-prototype-frontend
     name: "Civil Prototype Frontend"
+    public: true
     # Placeholder: Dex will read the secret from the environment variable
-    secret: "${DEX_PROTOTYPE_FRONTEND_CLIENT_SECRET}"
+    # secret: "${DEX_PROTOTYPE_FRONTEND_CLIENT_SECRET}"
     redirectURIs:
       - "${DEX_PROTOTYPE_FRONTEND_REDIRECT_URI}"
       - "http://localhost:3000/api/auth/callback/dex"
