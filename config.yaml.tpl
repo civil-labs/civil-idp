@@ -40,6 +40,11 @@ staticClients:
     secret: "${DEX_OIDC_DEBUGGER_CLIENT_SECRET}"
     redirectURIs:
       - "${DEX_OIDC_DEBUGGER_REDIRECT_URI}"
+  - id: qgis
+    name: "QGIS"
+    secret: "${DEX_QGIS_CLIENT_SECRET}"
+    redirectURIs:
+      - "${DEX_QGIS_REDIRECT_URI}"
 
 ${DEX_CONNECTORS_LIST}
 
