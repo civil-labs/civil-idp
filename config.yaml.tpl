@@ -81,5 +81,5 @@ grpc:
 #   # Client auth CA.
 #   tlsClientCA: "${DEX_GRPC_CA_FILE}"
 
-#   # enable reflection
-#   reflection: true
+# enable reflection
+  reflection: true
