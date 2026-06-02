@@ -1,5 +1,5 @@
 # Use the alpine-based Dex image (check your base tag)
-FROM ghcr.io/dexidp/dex:v2.37.0-alpine
+FROM ghcr.io/dexidp/dex:v2.45.1-alpine
 
 USER root
 
