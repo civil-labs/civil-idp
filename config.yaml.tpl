@@ -3,8 +3,7 @@ issuer: "${DEX_ISSUER_URL}" # Public URL
 web:
   http: "0.0.0.0:${DEX_WEB_UI_PORT}" # Listen on all interfaces
   allowedOrigins:
-    - http://127.0.0.1:5180 # this sandbox
-    - http://localhost:5180 # later: the hosted viz origin too
+    - "*"
 
 storage:
   type: postgres
